@@ -74,3 +74,17 @@ function Npalabras() {
         //echo "Palabra repetida :",$palabraRepetida,"<br>";
         return $palabraRepetida;
 }
+
+function cabecera() {
+    
+    echo "<html lang='en'>
+<head>
+    
+    <title>Mini Foro</title>
+</head>
+<body>
+    <h1 style='background:blue; width: 10em; height:auto;text-align: center;padding-top:5%;padding-bottom:5% '>Mini foro</h1>
+</body>
+</html>";
+    ;
+}
