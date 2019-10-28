@@ -26,8 +26,8 @@ function usuarioOK($nombre, $contrasena) {
 
 function longitud() {
     
-    $texto= strlen($_REQUEST["comentario"]);
-    return $texto;
+    $numero= strlen($_REQUEST["comentario"]);
+    return $numero;
     
 }
 
@@ -43,4 +43,34 @@ function palabras() {
     }
     return $contador;*/
     return str_word_count($_REQUEST["comentario"]);
+}
+
+
+function Npalabras() {
+    
+    
+    $texto=$_REQUEST["comentario"];
+    $palabraRepetida=$texto[0];
+    $mayor=0;
+    
+    for($x=0;$x<longitud();$x++){
+        
+        if($x==0){
+        $mayor=mb_substr_count($texto,$texto[$x]);
+        $palabraRepetida=$texto[$x];
+        
+        }
+        else{
+            if($mayor<mb_substr_count($texto,$texto[$x])){
+                $mayor=mb_substr_count($texto,$texto[$x]);
+                $palabraRepetida=$texto[$x];
+            }
+        }
+        
+        //echo $texto[$x],":",mb_substr_count($texto,$texto[$x]),"  <br>";
+       
+        }
+       
+        //echo "Palabra repetida :",$palabraRepetida,"<br>";
+        return $palabraRepetida;
 }
