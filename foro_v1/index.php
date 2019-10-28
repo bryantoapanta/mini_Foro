@@ -3,6 +3,7 @@
 // PRIMERA APROXIMACI�N AL MODELO VISTA CONTROLADOR.
 // Funciones auxiliars Ej- usuarioOK //usuarioOK - Invertir nombre para validar contrase�a.
 include_once 'app/funciones.php';
+cabecera();
 
 if ( !isset($_REQUEST['orden']) ){
     include_once 'app/entrada.php';
