@@ -23,3 +23,24 @@ function usuarioOK($nombre, $contrasena) {
     return false;
     
 }
+
+function longitud() {
+    
+    $texto= strlen($_REQUEST["comentario"]);
+    return $texto;
+    
+}
+
+function palabras() {
+   /* $contador=0;
+    $texto= $_REQUEST["comentario"];
+    for($x=0;$x<longitud();$x++){
+        echo $texto[$x];
+        if($texto[$x]="a"){
+            $contador++;
+            
+        }
+    }
+    return $contador;*/
+    return str_word_count($_REQUEST["comentario"]);
+}
